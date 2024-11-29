@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="" target="_blank">
+        <img src="../media/header/logo.svg" alt="EF logo">
+      </a>
+      <span>Event Flow</span>
+    </div>
+    <div class="search-bar">
+      <img src="../media/header/search.svg" alt="Search">
+      <input type="text" style="outline: none; border: none;" placeholder="События, мероприятия...">
+    </div>
+    <div class="location">
+      <img src="../media/header/location.svg" alt="Location">
+      <span>Алматы</span>
+    </div>
+    <div class="profile">
+      <a href="#">
+        <img src="../media/header/profile.svg" alt="Profile">
+      </a>
+    </div>
+  </header>
+
+  <main class="event-form-container">
+    <form class="event-form" id="eventForm">
+      <div class="form-left">
+        <label for="event-name">Название:</label>
+        <input type="text" id="event-name" placeholder="Введите название" required>
+
+        <label for="event-category">Категория:</label>
+        <select id="event-category" required>
+          <option value="" disabled selected>Выберите категорию</option>
+          <option value="1">Что-то</option>
+          <option value="2">Еще что-то</option>
+        </select>
+
+        <label for="event-address">Адрес:</label>
+        <input type="text" id="event-address" placeholder="Введите адрес" required>
+
+        <label for="event-price">Цена:</label>
+        <div class="price-input">
+          <input type="number" id="event-price" placeholder="0" required>
+          <span>₸</span>
+        </div>
+      </div>
+
+      <div class="form-right">
+        <label for="event-image">Изображение:</label>
+        <div class="image-upload" id="imageUpload">
+          <input type="file" id="event-image" accept="image/*">
+          <span>Вставьте сюда изображение</span>
+          <img id="previewImage" alt="Предпросмотр изображения" style="display: none; max-width: 100%; border-radius: 10px; margin-top: 10px;">
+        </div>
+      </div>
+      
+      <div class="form-bottom">
+        <label for="event-description">Описание:</label>
+        <textarea id="event-description" placeholder="Введите описание" rows="5" required></textarea>
+        <button type="submit" class="button-small">Создать</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
